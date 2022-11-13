@@ -7,7 +7,7 @@ import java.io.IOException;
 
 /**
  *
- * @author KFelt
+ * @author Stolen directly from internet.
  */
 public class CLS {
     public static void main(String... arg) throws IOException, InterruptedException {
