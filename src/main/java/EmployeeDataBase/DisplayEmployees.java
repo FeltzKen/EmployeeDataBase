@@ -19,9 +19,9 @@ public class DisplayEmployees {
         String methodName = e.getMethodName();// set get calling method as a string
         DecimalFormat floatFormat = new DecimalFormat("#.00");
         String leftFormat = "| %-3s | %-15s | %-7s | %-6s |%n";
-        System.out.printf("+-----+-----------------+---------+--------+%n");// set up table and populate employee data.
-        System.out.printf("| #   | Name            | Wage    | Points |%n");
-        System.out.printf("+-----+-----------------+---------+--------+%n");
+        System.out.println("+-----+-----------------+---------+--------+");// set up table and populate employee data.
+        System.out.println("| #   | Name            | Wage    | Points |");
+        System.out.println("+-----+-----------------+---------+--------+");
         for(var i = 0; i < emps.size(); i++){
             System.out.printf(
                     leftFormat,
@@ -31,19 +31,17 @@ public class DisplayEmployees {
                     emps.get(i).getPoints());  
         }    
         if(methodName != "main"){// Check for how the bottom of the table should be set up.
-            System.out.printf("+-----+-----------------+---------+--------+%n");
+            System.out.println("+-----+-----------------+---------+--------+");
             System.out.printf(leftFormat, 0, "GO BACK", "", "");
-        }
-        System.out.printf("+-----+-----------------+---------+--------+%n");
-        if(methodName != "main"){
+            System.out.println("+-----+-----------------+---------+--------+");
             if(methodName == "modifyEmployeeData"){// Display when calling method is modifyEmployeeData.
                 System.out.print("Select employee to modify:");
             }
             if(methodName == "removeEmployee"){// Display when calling method is removeEmployee.
                 System.out.print("Select employee to remove:");
             }
-
         }else{// Display when calling method is main.
+            System.out.println("+-----+-----------------+---------+--------+");
             System.out.print("Press enter to continue...");
             System.in.read();
             CLS.main();

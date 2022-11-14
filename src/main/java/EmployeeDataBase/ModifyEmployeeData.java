@@ -39,12 +39,12 @@ public class ModifyEmployeeData {
                 break;// Return to main menu if 0 selected.
             }
             // Set up and populate next table. 
-            System.out.printf("|-----+------------+-----------------+%n");
+            System.out.println("|-----+------------+-----------------+");
             System.out.printf(leftFormat2, 1, "Name", emps.get(employeeSelected - 1).getName()); 
             System.out.printf(leftFormat2, 2, "Wage", emps.get(employeeSelected - 1).getWage()); 
             System.out.printf(leftFormat2, 3, "Points", emps.get(employeeSelected - 1).getPoints()); 
-            System.out.printf("| 0   | GO BACK    |                 |%n");
-            System.out.printf("|-----+------------+-----------------+%n");
+            System.out.println("| 0   | GO BACK    |                 |");
+            System.out.println("|-----+------------+-----------------+");
             System.out.print("Select the value modify:");           
             // Loop to select the attribute that will be modified.
             while(true){
@@ -53,7 +53,7 @@ public class ModifyEmployeeData {
                     break;
                 }
                 catch(Exception e){
-                    System.out.println("The input was incorrect. Select the value modify:");
+                    System.out.print("The input was incorrect. Select the value modify:");
                     Main.sc.next();// Consume input.
                 }
             }// End attribute selection loop.

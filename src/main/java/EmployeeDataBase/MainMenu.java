@@ -17,24 +17,24 @@ public class MainMenu {
         CLS.main();
         String menuFormat = "| %-2d| %-35s |%n";
         int selection;
-        System.out.printf("+---+-------------------------------------+%n");
-        System.out.printf("| # | Please choose an option from below. |%n");
-        System.out.printf("+---|-------------------------------------+%n");
+        System.out.println("+---+-------------------------------------+");
+        System.out.println("| # | Please choose an option from below. |");
+        System.out.println("+---|-------------------------------------+");
         System.out.printf(menuFormat, 1, "Add new employees.");
-        System.out.printf("|   |                                     |%n");
+        System.out.println("|   |                                     |");
         System.out.printf(menuFormat, 2, "Modify existing employee data.");
-        System.out.printf("|   |                                     |%n");
+        System.out.println("|   |                                     |");
         System.out.printf(menuFormat, 3, "Remove employee.");
-        System.out.printf("|   |                                     |%n");
+        System.out.println("|   |                                     |");
         System.out.printf(menuFormat, 4, "Display employees.");
-        System.out.printf("|   |                                     |%n");
+        System.out.println("|   |                                     |");
         System.out.printf(menuFormat, 5, "Save employee list.");
-        System.out.printf("|   |                                     |%n");
+        System.out.println("|   |                                     |");
 
         // Add more menu otions above this line.
-        System.out.printf("+---+-------------------------------------+%n");
+        System.out.println("+---+-------------------------------------+");
         System.out.printf(menuFormat, 0, "Exit.");
-        System.out.printf("+---+-------------------------------------+%n");
+        System.out.println("+---+-------------------------------------+");
         System.out.println("Please make sure to save your changes before exiting the program.");
         System.out.print("Please make a selection:");
         while(true){
@@ -43,7 +43,7 @@ public class MainMenu {
                 break;
             }
             catch(Exception e){
-                System.out.println("The input was incorrect. Please enter a valid number");
+                System.out.print("The input was incorrect. Please enter a valid number");
                 sc.next();
             }
         }
