@@ -20,7 +20,6 @@ public class ReadData {
     String line = "";
     String[] lineInfo;
     String file = "EmployeesList.txt";
-
     try(BufferedReader br = new BufferedReader(new FileReader(file))) {
         while ((line = br.readLine()) != null) {
             lineInfo = line.split(",");

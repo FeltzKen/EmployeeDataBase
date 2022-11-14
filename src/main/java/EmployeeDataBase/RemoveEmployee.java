@@ -31,7 +31,7 @@ public class RemoveEmployee {
                 System.out.print("The input was incorrect. Select employee to remove:");
                 Main.sc.next();
             }
-            }
+        }
         CLS.main();
     }
 }

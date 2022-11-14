@@ -17,7 +17,6 @@ public class CreateEmployee{
     public static void createEmployee(ArrayList<EMPLOYEE> emps) throws FileNotFoundException, IOException, InterruptedException{
         String EXITWORD = "DONE";
         String tempString = "";
-
         while(true){
             System.out.print("Enter name to add employee, or type done when you are finsished:");
             tempString = Main.sc.next();
@@ -47,8 +46,7 @@ public class CreateEmployee{
                     System.out.print("The input was incorrect. Please enter a valid number:");
                     Main.sc.next();
                 }
-            }
-            
+            }           
         }
         CLS.main();
         DisplayEmployees.displayEmployees(emps);        

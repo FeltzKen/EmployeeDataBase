@@ -15,4 +15,3 @@ public class CLS {
         System.out.flush();     
     }
 }
-

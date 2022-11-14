@@ -15,7 +15,7 @@ public class MainMenu {
     
     public static int mainMenu() throws IOException, InterruptedException{
         CLS.main();
-    String menuFormat = "| %-2d| %-35s |%n";
+        String menuFormat = "| %-2d| %-35s |%n";
         int selection;
         System.out.printf("+---+-------------------------------------+%n");
         System.out.printf("| # | Please choose an option from below. |%n");
@@ -49,5 +49,4 @@ public class MainMenu {
         }
         return selection;
     }
-
 }

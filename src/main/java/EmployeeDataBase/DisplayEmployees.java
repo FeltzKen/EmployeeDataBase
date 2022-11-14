@@ -47,7 +47,6 @@ public class DisplayEmployees {
             System.out.print("Press enter to continue...");
             System.in.read();
             CLS.main();
-        }
-        
+        }       
     }
 }
