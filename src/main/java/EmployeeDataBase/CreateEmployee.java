@@ -24,6 +24,7 @@ public class CreateEmployee{
                 break;
             }
             emps.add(new EMPLOYEE());
+            System.out.println(emps.size());
             emps.get(emps.size()-1).setName(tempString);
             System.out.print("Enter the number of points " + emps.get(emps.size()-1).getName() + " has:");
             while(true){

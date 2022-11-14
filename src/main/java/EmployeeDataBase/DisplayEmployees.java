@@ -16,7 +16,7 @@ public class DisplayEmployees {
     public static void displayEmployees(ArrayList<EMPLOYEE> emps) throws IOException, InterruptedException{
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();// create stacktrace array.
         StackTraceElement e = stacktrace[2];// get stack trace member that is the calling function.
-        String methodName = e.getMethodName();// set get calling method as a string
+        String methodName = e.getMethodName();// set calling method as a string
         DecimalFormat floatFormat = new DecimalFormat("#.00");
         String leftFormat = "| %-3s | %-15s | %-7s | %-6s |%n";
         System.out.println("+-----+-----------------+---------+--------+");// set up table and populate employee data.
