@@ -14,12 +14,12 @@ import java.lang.StackTraceElement;
 public class DisplayEmployees {
 
     public static void displayEmployees(ArrayList<EMPLOYEE> emps) throws IOException, InterruptedException{
-        StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
-        StackTraceElement e = stacktrace[2];
-        String methodName = e.getMethodName();
+        StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();// create stacktrace array.
+        StackTraceElement e = stacktrace[2];// get stack trace member that is the calling function.
+        String methodName = e.getMethodName();// set get calling method as a string
         DecimalFormat floatFormat = new DecimalFormat("#.00");
         String leftFormat = "| %-3s | %-15s | %-7s | %-6s |%n";
-        System.out.printf("+-----+-----------------+---------+--------+%n");
+        System.out.printf("+-----+-----------------+---------+--------+%n");// set up table and populate employee data.
         System.out.printf("| #   | Name            | Wage    | Points |%n");
         System.out.printf("+-----+-----------------+---------+--------+%n");
         for(var i = 0; i < emps.size(); i++){
@@ -30,20 +30,20 @@ public class DisplayEmployees {
                     "$"+floatFormat.format(emps.get(i).getWage()), 
                     emps.get(i).getPoints());  
         }    
-        if(methodName != "main"){
+        if(methodName != "main"){// Check for how the bottom of the table should be set up.
             System.out.printf("+-----+-----------------+---------+--------+%n");
             System.out.printf(leftFormat, 0, "GO BACK", "", "");
         }
         System.out.printf("+-----+-----------------+---------+--------+%n");
         if(methodName != "main"){
-            if(methodName == "modifyEmployeeData"){
+            if(methodName == "modifyEmployeeData"){// Display when calling method is modifyEmployeeData.
                 System.out.print("Select employee to modify:");
             }
-            if(methodName == "removeEmployee"){
+            if(methodName == "removeEmployee"){// Display when calling method is removeEmployee.
                 System.out.print("Select employee to remove:");
             }
 
-        }else{
+        }else{// Display when calling method is main.
             System.out.print("Press enter to continue...");
             System.in.read();
             CLS.main();

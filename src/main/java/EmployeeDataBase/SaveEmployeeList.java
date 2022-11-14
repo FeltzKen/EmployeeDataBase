@@ -16,21 +16,19 @@ import java.util.ArrayList;
 public class SaveEmployeeList {
 
     public static void saveEmployeeList(ArrayList<EMPLOYEE> emps) throws FileNotFoundException, IOException, InterruptedException{
-        System.out.println(emps.size());
         char SAVE;
-        System.out.print("Are you sure Y|N: ");
-        String file = "EmployeesList.txt";
+        System.out.print("Are you sure Y|N: ");// Verify save request.
+        String file = "EmployeesList.txt";// Name of file that is used to save and load employee data.
         while(true){
-            SAVE = Main.sc.next().charAt(0);
-            if(Character.toUpperCase(SAVE) == 'Y'){
-                System.out.println(emps.size());
-                PrintWriter printWriter = new PrintWriter(file);
-                for (int i = 0; i < emps.size(); i++){
+            SAVE = Main.sc.next().charAt(0);// scan input for character value.
+            if(Character.toUpperCase(SAVE) == 'Y'){// if yes perform save actions.
+                PrintWriter printWriter = new PrintWriter(file);// set new writer to write data to supplied file.
+                for (int i = 0; i < emps.size(); i++){// Loop through employee array list and add values to csv.
                     printWriter.println(emps.get(i).getName() + "," + emps.get(i).getPoints() + "," + emps.get(i).getWage());
                 }
                 printWriter.close();
                 break;
-            }else if(Character.toUpperCase(SAVE) == 'N'){
+            }else if(Character.toUpperCase(SAVE) == 'N'){// if no go back to the main menu.
                 break;
             }else{
                 System.out.print("The input was not correct. Are you sure Y|N: ");
