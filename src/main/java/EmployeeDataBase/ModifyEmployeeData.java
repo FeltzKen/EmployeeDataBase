@@ -15,8 +15,7 @@ public class ModifyEmployeeData {
      * @param emps
      */
     public static void modifyEmployeeData(ArrayList<EMPLOYEE> emps) throws IOException, InterruptedException{  
-    String leftFormat1 = "| %-3d | %-15s | %-5f | %-5d |%n";
-    String leftFormat2 = "| %-3d | %-10s | %-15s |%n";
+    String leftFormat = "| %-3d | %-10s | %-15s |%n";
     String newStringValue = "";
     int newIntValue = 0;
     float newFloatValue = 0.0f;
@@ -40,9 +39,9 @@ public class ModifyEmployeeData {
             }
             // Set up and populate next table. 
             System.out.println("|-----+------------+-----------------+");
-            System.out.printf(leftFormat2, 1, "Name", emps.get(employeeSelected - 1).getName()); 
-            System.out.printf(leftFormat2, 2, "Wage", emps.get(employeeSelected - 1).getWage()); 
-            System.out.printf(leftFormat2, 3, "Points", emps.get(employeeSelected - 1).getPoints()); 
+            System.out.printf(leftFormat, 1, "Name", emps.get(employeeSelected - 1).getName()); 
+            System.out.printf(leftFormat, 2, "Wage", emps.get(employeeSelected - 1).getWage()); 
+            System.out.printf(leftFormat, 3, "Points", emps.get(employeeSelected - 1).getPoints()); 
             System.out.println("| 0   | GO BACK    |                 |");
             System.out.println("|-----+------------+-----------------+");
             System.out.print("Select the value modify:");           

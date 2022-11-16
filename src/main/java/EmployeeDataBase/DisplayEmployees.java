@@ -44,6 +44,7 @@ public class DisplayEmployees {
             System.out.println("+-----+-----------------+---------+--------+");
             System.out.print("Press enter to continue...");
             System.in.read();
+            Main.sc.next();
             CLS.main();
         }       
     }
