@@ -49,7 +49,6 @@ public class CreateEmployee{
                 }
             }           
         }
-        CLS.main();
         DisplayEmployees.displayEmployees(emps);        
     }
 }

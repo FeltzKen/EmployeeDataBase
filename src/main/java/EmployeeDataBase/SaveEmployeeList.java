@@ -34,6 +34,5 @@ public class SaveEmployeeList {
                 System.out.print("The input was not correct. Are you sure Y|N: ");
             }        
         }
-        CLS.main();
     }
 }

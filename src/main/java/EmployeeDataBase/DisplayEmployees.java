@@ -17,8 +17,7 @@ public class DisplayEmployees {
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();// create stacktrace array.
         StackTraceElement e = stacktrace[2];// get stack trace member that is the calling function.
         String methodName = e.getMethodName();// set calling method as a string
-        DecimalFormat floatFormat = new DecimalFormat("#.00");
-        String leftFormat = "| %-3s | %-15s | %-7s | %-6s |%n";
+        String leftFormat = "| %-3s | %-15s | %s%-6.2f | %-6s |%n";
         System.out.println("+-----+-----------------+---------+--------+");// set up table and populate employee data.
         System.out.println("| #   | Name            | Wage    | Points |");
         System.out.println("+-----+-----------------+---------+--------+");
@@ -27,7 +26,8 @@ public class DisplayEmployees {
                     leftFormat,
                     i+1,
                     emps.get(i).getName(), 
-                    "$"+floatFormat.format(emps.get(i).getWage()), 
+                    "$",
+                    emps.get(i).getWage(), 
                     emps.get(i).getPoints());  
         }    
         if(methodName != "main"){// Check for how the bottom of the table should be set up.
@@ -44,8 +44,6 @@ public class DisplayEmployees {
             System.out.println("+-----+-----------------+---------+--------+");
             System.out.print("Press enter to continue...");
             System.in.read();
-            Main.sc.next();
-            CLS.main();
         }       
     }
 }

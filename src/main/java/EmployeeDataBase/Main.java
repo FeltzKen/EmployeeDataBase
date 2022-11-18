@@ -13,7 +13,6 @@ import java.util.Scanner;
 public class Main {
     public static ArrayList<EMPLOYEE> employees = new ArrayList<>();
     public static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) throws  IOException, InterruptedException{
         employees = ReadData.readData(employees);
         while(true){

@@ -32,6 +32,5 @@ public class RemoveEmployee {
                 Main.sc.next();
             }
         }
-        CLS.main();
     }
 }
